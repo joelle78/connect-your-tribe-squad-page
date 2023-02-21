@@ -1,14 +1,30 @@
+
 :root {
     --white: #fff;
-    --blood-orange: #f7511d;
-    --beige: #f7eee3;
-    --grey: #efefef;
+    --purple-cards: #7B2CBF;
+    --dark-purple: #240046;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body{
+    background-color: #e0c3fc;
+}
+
+/*H1 T/m H6 ELEMENT*/
+h1 {
+    color: var(--dark-purple);
+    font-size: 4em;
+}
+
+h2 {
+    color: var(--dark-purple);
 }
 
 /** page layout **/
@@ -28,53 +44,77 @@ html {
 /* Make nav sticky */
 main > nav {
     position: sticky;
-    top: 2rem;
+    top: 3rem;
     align-self: start;
 }
 
 /* ScrollSpy active styles (see JS tab for activation) */
 .section-nav li.active > a {
-    color: var(--blood-orange);
+    color: var(--dark-purple);
     font-weight: 500;
 }
 
 /* Sidebar Navigation */
 .section-nav {
     padding-left: 0;
-    border-left: 1px solid var(--grey);
+    border-left: 1px solid var(--dark-purple);
+    display: flex;
+    flex-direction: row;
 }
 
 .section-nav a {
     text-decoration: none;
     display: block;
-    padding: .125rem 0;
-    color: #ccc;
+    padding-left: 1em;
+    color: white;
     transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
 }
 
 .section-nav a:hover,
 .section-nav a:focus {
-    color: var(--blood-orange);
+    color: var(--dark-purple);
 }
 
 * a {
     text-decoration: none;
-    color: var(--blood-orange);
+    color: var(--purple-cards);
     font-weight: bold;
 }
 
-ul, ol {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
 
 section {
     padding-top: 10rem;
     padding-bottom: 18rem;
 }
 
-li {
-    margin-left: 1rem;
+.header {
+    margin-top: 1em;
 }
+
+.header p {
+    margin-top: 1em;
+}
+
+.flex-wrapper-cards div {
+    outline: solid 3px var(--purple-cards);
+    background-color: var(--white);
+    border-radius: 10px;
+    width: 300px;
+    height: 350px;
+    margin-top: 5em;
+    margin-right: 5em;
+}
+
+.flex-wrapper-cards h2 {
+    text-align: center;
+    padding-top: 1em;
+}
+
+.flex-wrapper-cards p {
+    text-align: center;
+    width: 280px;
+    margin-left: 0.5em;
+    padding-top: 1em;
+}
+
 

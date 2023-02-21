@@ -1,5 +1,9 @@
 <%- include('./partials/head') %>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
+<body>
 <main>
     <div>
 
@@ -11,26 +15,37 @@
 
     <section id="squad-a">
         <h2>Squad A</h2>
+
+        <div class="flex-wrapper-cards">
+            <div>
+                <h2>
+                    JOELLE
+                </h2>
+
+                <p>
+                    DIT IS MIJN BIO
+                </p>
+            </div>
+        </div>
     </section>
 
     <section id="squad-b">
-        <h3>Squad B</h3>
+        <h2>Squad B</h2>
     </section>
 
     <section id="squad-c">
-        <h4>Squad C</h4>
+        <h2>Squad C</h2>
     </section>
 
     </div>
 
     <nav class="section-nav">
-        <ol>
-            <li><a href="#squad-a">Squad A</a></li>
-            <li><a href="#squad-b">Squad B</a></li>
-            <li><a href="#squad-c">Squad C</a></li>
 
-        </ol>
+            <a href="#squad-a">Squad A</a>
+            <a href="#squad-b">Squad B</a>
+            <a href="#squad-c">Squad C</a>
     </nav>
-</main>
 
+</main>
+</body>
 <%- include('./partials/foot') %>
