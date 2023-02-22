@@ -16,17 +16,21 @@
     <section id="squad-a">
         <h2>Squad A</h2>
 
+        <!-- Hier komen de members -->
+        <% squad.members.forEach(member => { %>
         <div class="flex-wrapper-cards">
-            <div>
-                <h2>
-                    JOELLE
-                </h2>
+            <div class="flex-wrapper-content">
 
-                <p>
-                    DIT IS MIJN BIO
-                </p>
+                    <img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
+
+
+                <h3>
+                    <%= member.name %>
+                </h3>
             </div>
         </div>
+        <% }) %>
+
     </section>
 
     <section id="squad-b">
