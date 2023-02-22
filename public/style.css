@@ -24,6 +24,18 @@ h1 {
 
 h2 {
     color: var(--dark-purple);
+    padding-top: 4em;
+    font-size: 3em;
+}
+
+h3 {
+    padding-top: 1em;
+    color: var(--dark-purple);
+}
+
+h4 {
+    padding-top: 1em;
+    color: var(--dark-purple);
 }
 
 /** page layout **/
@@ -82,7 +94,7 @@ main > nav {
 
 
 section {
-    padding-top: 10rem;
+    padding-top: 2rem;
     padding-bottom: 18rem;
 }
 
@@ -102,7 +114,7 @@ section {
 
 .flex-wrapper-cards div {
     outline: solid 3px var(--purple-cards);
-    background-color: var(--white);
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     width: 300px;
     height: 350px;
@@ -110,18 +122,17 @@ section {
     margin-right: 5em;
 }
 
-/*.flex-wrapper-cards h2 {*/
-/*    text-align: center;*/
-/*    padding-top: 1em;*/
-/*}*/
-
-.flex-wrapper-cards img {
+.profile-pics {
     max-width: 9em;
     max-height: 9em;
     min-width: 9em;
     min-height: 9em;
     border-radius: 50%;
+}
 
+.flex-wrapper-cards img {
+    width: 2.5em;
+    margin-top: 1em;
 }
 
 .flex-wrapper-cards p {

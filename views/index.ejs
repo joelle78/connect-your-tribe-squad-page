@@ -1,53 +1,52 @@
 <%- include('./partials/head') %>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet">
 
 <body>
 <main>
     <div>
-
-
+        
         <div class="header">
             <h1>Connect your tribe</h1>
             <p>Squad page</p>
         </div>
 
-    <section id="squad-a">
-        <h2>Squad A</h2>
+        <h2><%=squad.name %></h2>
 
-        <!-- Hier komen de members -->
-        <% squad.members.forEach(member => { %>
-        <div class="flex-wrapper-cards">
-            <div class="flex-wrapper-content">
+        <section id="squad-a">
+            <!-- Hier komen de members -->
+            <% squad.members.forEach(member => { %>
+                <div class="flex-wrapper-cards">
+                    <div class="flex-wrapper-content">
 
-                    <img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
+                        <img class="profile-pics" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>"/>
+                        <h3>
+                            <%= member.name %> <%= member.surname %>
+                        </h3>
+                        <h4>
+                            <%= member.role %>
+                        </h4>
+
+                        <a href="<%= " https://github.com/" + member.gitHubHandle %>" target="_blank">
+                            <img src="/assets/github.png" alt="github">
+                        </a>
 
 
-                <h3>
-                    <%= member.name %>
-                </h3>
-            </div>
-        </div>
-        <% }) %>
+                    </div>
 
-    </section>
 
-    <section id="squad-b">
-        <h2>Squad B</h2>
-    </section>
+                </div>
+            <% }) %>
 
-    <section id="squad-c">
-        <h2>Squad C</h2>
-    </section>
-
+        </section>
     </div>
 
     <nav class="section-nav">
-
-            <a href="#squad-a">Squad A</a>
-            <a href="#squad-b">Squad B</a>
-            <a href="#squad-c">Squad C</a>
+        <a href="/?squad=squad-a-2022">Squad A</a>
+        <a href="/?squad=squad-b-2022">Squad B</a>
+        <a href="/?squad=squat-c-2022">Squad C</a>
     </nav>
 
 </main>
