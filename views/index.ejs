@@ -10,23 +10,27 @@
 
         <div class="header">
             <h1>Connect your tribe</h1>
-            <p>Squad page</p>
         </div>
 
+        <!-- Groep namen -->
         <h2><%= squad.name %></h2>
 
         <section id="squad-a">
-            <!-- Hier komen de members -->
+
+            <!-- Cards voor alle members-->
             <% squad.members.forEach(member => { %>
                 <div class="flex-wrapper-cards">
                     <div class="flex-wrapper-content">
 
+                        <!-- Profiel images -->
                         <img class="profile-pics" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>"/>
 
+                        <!--  Voor + achternamen -->
                         <h3>
                             <%= member.name %> <%= member.surname %>
                         </h3>
 
+                        <!-- Als member.role gelijk is aan student: member.role + FDND jaar 1 / Anders: docent -->
                         <% if ( member.role == 'student') { %>
                             <h4> <%= member.role %> FDND jaar 1 </h4>
 
@@ -34,6 +38,7 @@
                             <h4>docent</h4>
                         <% } %>
 
+                        <!-- Link met img naar github profielen  -->
                         <a href="<%= " https://github.com/" + member.gitHubHandle %>" target="_blank">
                             <img src="/assets/github.png" alt="github">
                         </a>
