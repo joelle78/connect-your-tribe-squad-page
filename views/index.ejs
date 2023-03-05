@@ -7,13 +7,13 @@
 <body>
 <main>
     <div>
-        
+
         <div class="header">
             <h1>Connect your tribe</h1>
             <p>Squad page</p>
         </div>
 
-        <h2><%=squad.name %></h2>
+        <h2><%= squad.name %></h2>
 
         <section id="squad-a">
             <!-- Hier komen de members -->
@@ -22,18 +22,21 @@
                     <div class="flex-wrapper-content">
 
                         <img class="profile-pics" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>"/>
+
                         <h3>
                             <%= member.name %> <%= member.surname %>
                         </h3>
-                        <h4>
-                            <%= member.role %>
-                        </h4>
+
+                        <% if ( member.role == 'student') { %>
+                            <h4> <%= member.role %> FDND jaar 1 </h4>
+
+                        <% } else { %>
+                            <h4>docent</h4>
+                        <% } %>
 
                         <a href="<%= " https://github.com/" + member.gitHubHandle %>" target="_blank">
                             <img src="/assets/github.png" alt="github">
                         </a>
-
-
                     </div>
 
 
